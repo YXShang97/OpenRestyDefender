@@ -1,6 +1,14 @@
 package org.example;
 
+import java.util.List;
+
 public class GeoIPRule implements Rule {
+    List<String> countries;
+
+    public GeoIPRule(List<String> countries) {
+        this.countries = countries;
+    }
+
     @Override
     public boolean check(HttpRequest httpRequest) {
         // binary search to identify the country of the IP address

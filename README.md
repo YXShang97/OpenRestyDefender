@@ -4,6 +4,8 @@ The Malicious HTTP Traffic Defending Middleware, powered by OpenResty Defender, 
 protect your web applications from various forms of malicious HTTP traffic. This middleware acts as a shield, allowing
 only legitimate traffic to pass through while effectively defending against potential threats.
 
+Built with: ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+
 ## Features
 
 #### 1. Malicious Activity Detection

@@ -8,29 +8,29 @@ Built with: ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-th
 
 ## Features
 
-#### 1. Malicious Activity Detection
+### 1. Malicious Activity Detection
 
 Designed and developed a robust middleware capable of detecting and thwarting malicious activities originating from
 specific IP addresses, effectively safeguarding application backend servers.
 
-#### 2. Extensible Rule Engine
+### 2. Extensible Rule Engine
 
 Implemented an extendable rule engine using the strategy design pattern. This engine manages HTTP request detection
 rules, such as identifying high-frequency IP addresses and forbidden geographical locations. The modular approach
 allows for easy addition and modification of detection rules.
 
-#### 3. Dynamic Rule Management
+### 3. Dynamic Rule Management
 
 Developed a mechanism for rule hot reloading by periodically fetching rule specifications from Amazon S3. This dynamic
 rule management enables real-time adjustments to detection criteria without interrupting the middleware's operation.
 
-#### 4. Seamless Communication with OpenResty Lua
+### 4. Seamless Communication with OpenResty Lua
 
 Leveraged socket programming to establish a TCP servlet, enabling seamless communication between the middleware and an
 OpenResty Lua module. This communication channel facilitates the exchange of incoming requests and the retrieval of
 verdicts based on the applied detection rules.
 
-#### 5. Optimized High-Frequency IP Detection
+### 5. Optimized High-Frequency IP Detection
 
 Optimized the high-frequency IP detection algorithm by utilizing a Redis List data structure. This optimization
 results in improved performance and efficiency when identifying and mitigating high-frequency IP addresses engaged in

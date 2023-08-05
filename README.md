@@ -22,13 +22,13 @@ allows for easy addition and modification of detection rules.
 Developed a mechanism for rule hot reloading by periodically fetching rule specifications from Amazon S3. This dynamic
 rule management enables real-time adjustments to detection criteria without interrupting the middleware's operation.
 
-#### Seamless Communication with OpenResty Lua
+#### 4. Seamless Communication with OpenResty Lua
 
 Leveraged socket programming to establish a TCP servlet, enabling seamless communication between the middleware and an
 OpenResty Lua module. This communication channel facilitates the exchange of incoming requests and the retrieval of
 verdicts based on the applied detection rules.
 
-#### 4. Optimized High-Frequency IP Detection
+#### 5. Optimized High-Frequency IP Detection
 
 Optimized the high-frequency IP detection algorithm by utilizing a Redis List data structure. This optimization
 results in improved performance and efficiency when identifying and mitigating high-frequency IP addresses engaged in
@@ -56,7 +56,7 @@ Start by cloning this repository to your local machine:
 git clone https://github.com/YXShang97/OpenRestyDefender.git
 ```
 
-#### 2. AWS Configuration (Rule Hot Reloading)
+#### 2. AWS Configuration (Loading Rules)
 
 If you wish to implement rule hot reloading by periodically fetching rule specifications from Amazon S3, follow these steps:
 
@@ -65,11 +65,25 @@ If you wish to implement rule hot reloading by periodically fetching rule specif
 - **Configure AWS Credentials**: Add your AWS access key and secret key to your `application.properties` file:
 
   ```ini
-  [default]
   cloud.aws.credentials.access-key=XXXXXXXXXXXXXXXXXXXX
   cloud.aws.credentials.secret-key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   ```
 
-  Replace XXXXXXXXXXXXXXXXXXXX with your actual AWS access key, and XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX with your AWS secret key.
-
   Note: Make sure to keep your AWS credentials secure. Do not share them in public repositories or insecure locations.
+
+#### 3. Integration
+
+Add the middleware to your application's OpenResty configuration. For example, in your Nginx server block:
+
+```nginx.conf
+server {
+    listen 999;
+    server_name yourdomain.com;
+
+    location / {
+        rewrite_by_lua_block {
+            .......
+        }
+    }
+}
+```

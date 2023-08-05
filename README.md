@@ -68,7 +68,7 @@ If you wish to implement rule hot reloading by periodically fetching rule specif
 cd OpenRestyDefender/src/main/resources/
 ```
 
-Replace `XXXXXXXXXXXXXXXXXXXX` with your actual AWS access key, and `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` with your AWS secret key:
+Replace `XXXXXXXXXXXXXXXXXXXX` with your actual AWS access key and your AWS secret key:
 
 ```ini
 cloud.aws.credentials.access-key=XXXXXXXXXXXXXXXXXXXX

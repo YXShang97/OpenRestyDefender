@@ -56,7 +56,7 @@ Start by cloning this repository to your local machine:
 git clone https://github.com/YXShang97/OpenRestyDefender.git
 ```
 
-#### 2. AWS Configuration (Loading Rules)
+#### 2. Configuration
 
 If you wish to implement rule hot reloading by periodically fetching rule specifications from Amazon S3, follow these steps:
 
@@ -64,12 +64,16 @@ If you wish to implement rule hot reloading by periodically fetching rule specif
 
 - **Configure AWS Credentials**: Add your AWS access key and secret key to your `application.properties` file:
 
-  ```ini
-  cloud.aws.credentials.access-key=XXXXXXXXXXXXXXXXXXXX
-  cloud.aws.credentials.secret-key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  ```
+```ini
+cd OpenRestyDefender/src/main/resources/
+```
 
-  Note: Make sure to keep your AWS credentials secure. Do not share them in public repositories or insecure locations.
+```ini
+cloud.aws.credentials.access-key=XXXXXXXXXXXXXXXXXXXX
+cloud.aws.credentials.secret-key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+Note: Make sure to keep your AWS credentials secure. Do not share them in public repositories or insecure locations.
 
 #### 3. Integration
 
